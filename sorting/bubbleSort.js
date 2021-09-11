@@ -1,7 +1,14 @@
 //  Bubble Sort compares 2 side by side numbers in an array and shifts the higher number up the array until the highest number has "bubbled up to the top"
 // BIG O
   //Time complexity is n^2 because it iterates through the entire array in the inner loop for each iteration of the outer loop 
-  // However, if an array was already sorted, big O becomes linear! It needs to do a lot less iterations of the entire array because it has less numbers to sort. This is in some cases faster than merge and quick sort!
+  // However, if an array was already sorted, big O becomes linear O(n)! It needs to do a lot less iterations of the entire array because it has less numbers to sort altogether. This is in some cases faster than merge and quick sort!
+
+// visual example of bubble sort: 
+// https://visualgo.net/en/sorting
+
+  // link with a visual example of all algos at the same time: 
+  // https://www.toptal.com/developers/sorting-algorithms
+
 
 // PSEUDOCODE
 /**
