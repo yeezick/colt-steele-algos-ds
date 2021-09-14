@@ -22,21 +22,21 @@
 const numArray = [2, 5, 9, 1, 8, 2, 3, 6, 4, 7, 36, 12, 81, 45, 43];
 
 /* my initial solution (unfinished)*/
-const bubbleSort = (arr) => {
-  for (let i = arr.length; i > 0; i -= 1) {
-    //loop through array starting from end to beginning
-    for (let j = 0; j < i - 1; j += 1) {
-      // loop within the first loop starting from beginning to end
-      if (arr[j] > arr[j + 1]) {
-        // if the currNum > nextNum
-        swap(arr, j, j + 1); // with a helper function
-      }
-      // by this point, the numbers 2 compared numbers have swapped if they needed
-    } // in each inner iteration, the highest number has "bubbled to the top" and begins again, comparing a new current number with its next number
-  }
-  // in each outer iteration,
-  console.log("bubble sort arr:", arr);
-};
+// const bubbleSort = (arr) => {
+//   for (let i = arr.length; i > 0; i -= 1) {
+//     //loop through array starting from end to beginning
+//     for (let j = 0; j < i - 1; j += 1) {
+//       // loop within the first loop starting from beginning to end
+//       if (arr[j] > arr[j + 1]) {
+//         // if the currNum > nextNum
+//         swap(arr, j, j + 1); // with a helper function
+//       }
+//       // by this point, the numbers 2 compared numbers have swapped if they needed
+//     } // in each inner iteration, the highest number has "bubbled to the top" and begins again, comparing a new current number with its next number
+//   }
+//   // in each outer iteration,
+//   console.log("bubble sort arr:", arr);
+// };
 
 const swap = (arr, idx1, idx2) => {
   // ES5 way
@@ -56,8 +56,10 @@ const swap = (arr, idx1, idx2) => {
 const bubbleSort = (arr) => {
   var noSwaps; // initalizing noSwaps
   for (let i = arr.length; i > 0; i -= 1) {
+    
     noSwaps = true; //setting noSwaps to true on each iteration 
     for (let j = 0; j < i - 1; j += 1) {
+      console.log( arr , arr[j], arr[j+1]);
       if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1);
         noSwaps = false; //since this if statement WAS used and the act of swapping was committed, swap is reassigned to false to fail the condition below
@@ -67,7 +69,7 @@ const bubbleSort = (arr) => {
       break;
     }
   }
-  console.log("bubble sort arr:", arr);
+  // console.log("bubble sort arr:", arr);
   return arr
 };
 
