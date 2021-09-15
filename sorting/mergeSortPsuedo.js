@@ -1,4 +1,4 @@
-// Merge function from earlier
+/* MERGE SORT */
 // this pseudocode is for merging the arrays 
 // define a function named "merge" that takes in 2 arguments
   // create an empty array (with a semantic name like results)
@@ -22,32 +22,8 @@
     // increment j
 
   // return the array 
-function merge(arr1, arr2){
-  let results = [];
-  let i = 0;
-  let j = 0;
-  while(i < arr1.length && j < arr2.length){
-      if(arr2[j] > arr1[i]){
-          results.push(arr1[i]);
-          i++;
-      } else {
-          results.push(arr2[j])
-          j++;
-      }
-  }
-  while(i < arr1.length) {
-      results.push(arr1[i])
-      i++;
-  }
-  while(j < arr2.length) {
-      results.push(arr2[j])
-      j++;
-  }
-  return results;
-}
 
-// Recrusive Merge Sort
-
+  
   // this is the actual sorting function 
   // define another function that takes 1 argument, an array
     // if the length of the array is less than or equal to 1, return the array 
@@ -58,12 +34,8 @@ function merge(arr1, arr2){
       // call the mergeSort function with the argument -> the array sliced at mid
     // return -> make a recursive call to the merge function with the arguments (left, right);
 
-function mergeSort(arr){
-  if(arr.length <= 1) return arr;
-  let mid = Math.floor(arr.length/2);
-  let left = mergeSort(arr.slice(0,mid));
-  let right = mergeSort(arr.slice(mid));
-  return merge(left, sright);
-}
 
-mergeSort([10,24,76,73])
+
+    const numArray = [2, 5, 9, 1, 8, 2, 3, 6, 4, 7, 36, 12, 81, 45, 43];
+    mergeSort(numArray)
+    
