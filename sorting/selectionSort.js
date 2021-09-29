@@ -30,3 +30,35 @@ const selectionSort = (arr) => {
 
 
 selectionSort(numbers);
+
+/**
+ * // Fill in the adder function below so that it passes the test cases below.
+
+const adder = (num1, num2) => {
+  if (!num2) {
+   return function (missingNum) {
+     return num1 + missingNum
+   }
+  }
+  
+  return num1 + num2
+  
+}
+
+
+/*
+function makeFunc() { //defining a function
+  var name = 'Mozilla'; //defining a variable "name"
+  function displayName() { ///defining an inner function 
+    alert(name); /// executes an alert
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+
+*/
+
+console.log( adder(5, 7) ) // 12
+console.log( adder(5)(7) ) // 12
